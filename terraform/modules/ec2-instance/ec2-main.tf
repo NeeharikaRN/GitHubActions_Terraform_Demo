@@ -36,7 +36,7 @@ resource "aws_instance" "instance1" {
 }
 
 resource "aws_ebs_volume" "awsvolume" {
-  availability_zone = "eu-west-1a"
+  availability_zone = "us-east-1a"
   size = 30
   encrypted = "true"
 
@@ -69,7 +69,7 @@ variable "key_name" {
 }
 variable "region" {
   type    = string
-  default = "eu-west-1"
+  default = "us-east-1"
   description = "Name of the region to create resource"
 }
 
