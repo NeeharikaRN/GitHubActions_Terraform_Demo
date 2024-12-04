@@ -20,7 +20,8 @@ jobs:
     # Runs a single command using the runners shell     
         - name: 'Terraform init' 
           id: init                                   
-          run: |                                     
+          run: |
+            cd terraform
             terraform init                           
 
         - name: Set up Terraform
@@ -28,10 +29,12 @@ jobs:
         
         - name: 'Terraform plan'                                   
           id: plan                                   
-          run: |                                     
+          run: |
+            cd terraform
             terraform plan                 
                                         
         - name: 'Terraform apply' 
           id: apply            
-          run: |    
+          run: | 
+            cd terraform
             terraform apply -auto-approve
